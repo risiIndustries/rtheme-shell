@@ -1,0 +1,3 @@
+GUIDE FOR MAINTAINERS ON UPDATING TO LATEST GNOME VERSIONS
+When a new version of GNOME comes out, use "diff" to find new additions and changes
+ and than update the _colors.scss file accordingly.

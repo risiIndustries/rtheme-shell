@@ -4,3 +4,6 @@ Generate CSS
 Generate icons for switches and checks
 Add icons to css
 Apply
+
+depends:
+glib2-devel

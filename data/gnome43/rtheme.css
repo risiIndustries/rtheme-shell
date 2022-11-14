@@ -1,0 +1,13 @@
+@import "gnome-shell.css";
+
+.check-box:focus StBin {
+  background-image: url("file://**/checkbox-off-focused.svg"); }
+
+.check-box:checked StBin {
+  background-image: url("file://**/checkbox.svg"); }
+
+.check-box:focus:checked StBin {
+  background-image: url("file://**/checkbox-focused.svg"); }
+
+.toggle-switch:checked {
+  background-image: url("file://**/toggle-on.svg"); }

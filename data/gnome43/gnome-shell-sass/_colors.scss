@@ -1,7 +1,7 @@
 // When color definition differs for dark and light variant,
 // it gets @if-ed depending on $variant
 
-@import '_palette.scss';
+@import 'palette';
 
 $is_highcontrast: "false";
 
@@ -23,10 +23,10 @@ $link_visited_color: if($variant == 'light', **link_visited_color_light**, **lin
 
 $warning_color: if($variant == 'light', **warning_color_light**, **warning_color_dark**);
 $error_color: if($variant == 'light', **error_color_light**, **error_color_dark**);
-$success_color: if($variant == 'light', **success_color_light**, );
+$success_color: if($variant == 'light', **success_color_light**, **success_color_dark**);
 $destructive_color: **destructive_color**;
 
-$osd_fg_color: **osd_fg_color_light**;
+$osd_fg_color: **osd_fg_color**;
 $osd_bg_color: $_dark_base_color; //hardcoded for both light & dark
 $osd_insensitive_bg_color: **osd_insensitive_bg_color**;
 $osd_insensitive_fg_color: if($variant == 'light', **osd_insensitive_fg_color_light**,  **osd_insensitive_fg_color_dark**);

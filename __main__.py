@@ -20,7 +20,7 @@ automatic = constants.automatic
 class Plugin(pm.Plugin):
     def __init__(self, plugin_manager: pm.PluginManager):
         super().__init__(plugin_manager)
-        self.name = "gnome_shell"
+        self.name = "gnome-shell"
         self.description = "A plugin for gnome-shell. Requires sassc and rtheme gnome extension to be enabled."
         self.version = "43"
         self.author = "PizzaLovingNerd"
@@ -73,9 +73,9 @@ class Plugin(pm.Plugin):
         # Getting hex for icon color
         icon_color = Gdk.RGBA()
         patch_icons = True
-        if "gnome_shell" in subvariant.plugin_properties and \
-                "accent_fg_color_dark" in subvariant.plugin_properties["gnome_shell"]:
-            icon_color.parse(subvariant.plugin_properties["gnome_shell"]["accent_fg_color_dark"])
+        if "gnome-shell" in subvariant.plugin_properties and \
+                "accent_fg_color_dark" in subvariant.plugin_properties["gnome-shell"]:
+            icon_color.parse(subvariant.plugin_properties["gnome-shell"]["accent_fg_color_dark"])
         elif "accent_fg_color_dark" in generated_properties:
             icon_color.parse(generated_properties["accent_fg_color_dark"])
         else:
@@ -94,9 +94,9 @@ class Plugin(pm.Plugin):
         with open(f"{CSS_DIR_}/gnome-shell-sass/_colors.scss", "r") as f:
             contents = f.read()
             for prop in automatic:
-                if "gnome_shell" in subvariant.plugin_properties and \
-                        prop in subvariant.plugin_properties["gnome_shell"]:
-                    contents = contents.replace(f"**{prop}**", subvariant.plugin_properties["gnome_shell"][prop])
+                if "gnome-shell" in subvariant.plugin_properties and \
+                        prop in subvariant.plugin_properties["gnome-shell"]:
+                    contents = contents.replace(f"**{prop}**", subvariant.plugin_properties["gnome-shell"][prop])
                 elif automatic[prop][0] in generated_properties:
                     contents = contents.replace(f"**{prop}**", generated_properties[automatic[prop][0]])
                 else:
